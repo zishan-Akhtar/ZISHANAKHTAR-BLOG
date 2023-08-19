@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Alert Box</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    body,html {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    
+    .custom-alert {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .alert-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    #closeAlertButton {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    main{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(assetForDesignLearning/ian-schneider-TamMbr4okv4-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #showAlertButton{
+        padding: .7rem;
+        border-radius: 8px;
+        cursor: pointer;
+        border: none;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <button id="showAlertButton">CLICK TO SEE </button>
+
+    </main>
+    
+    <div class="custom-alert" id="customAlert">
+        <div class="alert-content">
+            <h2>Work on progress</h2>
+            <p>This Website is under construction to see the progress click down below.</p>
+            <a href="index1.html"><button id="closeAlertButton">OPEN</button></a>
+        </div>
+    </div>
+    
+    <script >document.addEventListener("DOMContentLoaded", function () {
+        const showAlertButton = document.getElementById("showAlertButton");
+        const customAlert = document.getElementById("customAlert");
+        const closeAlertButton = document.getElementById("closeAlertButton");
+    
+        showAlertButton.addEventListener("click", function () {
+            customAlert.style.display = "flex";
+        });
+    
+        closeAlertButton.addEventListener("click", function () {
+            customAlert.style.display = "none";
+        });
+    });
+    </script>
+</body>
+</html>
